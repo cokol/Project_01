@@ -1,0 +1,182 @@
+@font-face {font-family:"EtelkaLightPro"; src:url("../fonts/etelkalightpro-webfont.eot"); src:url("../fonts/etelkalightpro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/etelkalightpro-webfont.woff") format("woff"), url("../fonts/etelkalightpro-webfont.ttf") format("truetype"), url("../fonts/etelkalightpro-webfont.svg#etelka_light_proregular") format("svg"); font-weight:normal; font-style:normal}
+@font-face {font-family:"EtelkaLightProItalic"; src:url("../fonts/etelkalightpro-italic-webfont.eot"); src:url("../fonts/etelkalightpro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/etelkalightpro-italic-webfont.woff") format("woff"), url("../fonts/etelkalightpro-italic-webfont.ttf") format("truetype"), url("../fonts/etelkalightpro-italic-webfont.svg#etelka_light_proitalic") format("svg"); font-weight:normal; font-style:normal}
+@font-face {font-family:"EtelkaMediumPro"; src:url("../fonts/etelkamediumpro-webfont.eot"); src:url("../fonts/etelkamediumpro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/etelkamediumpro-webfont.woff") format("woff"), url("../fonts/etelkamediumpro-webfont.ttf") format("truetype"), url("../fonts/etelkamediumpro-webfont.svg#etelka_medium_proregular") format("svg"); font-weight:normal; font-style:normal}
+
+body {margin:0; padding:0; font:14px/20px arial, helvetica, sans-serif; color:#393939; background:#fff}
+
+a {color:#0082c9; outline:none}
+a:hover {text-decoration:none}
+
+img {border:none}
+
+.wrapper {width:100%; position:relative; overflow:hidden}
+.wrapper-main:before {content:""; display:block; position:absolute; left:0; top:0; width:30px; height:100%; background:#8dc63f}
+.wrapper-main:after {content:""; display:block; position:absolute; right:0; top:0; width:30px; height:100%; background:#8dc63f}
+
+header {max-width:1180px; width:100%; margin:0 auto; position:relative; z-index:20; padding:0 30px 18px 30px}
+header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.logo {float:left; line-height:0; padding:19px 0 0 0}
+
+.header-search {float:right; margin:31px 0 0 0; padding:3px 0 0 14px; height:16px; border-left:1px solid #bfbfbf; line-height:0}
+
+nav {float:right; padding:28px 12px 0 0; font:12px/26px EtelkaLightPro, sans-serif; text-transform:uppercase}
+nav ul {margin:0; padding:0; list-style:none; position:relative}
+nav ul li {float:left; margin:0 0 0 15px; padding:0; position:relative; z-index:2}
+nav ul li a {float:left; padding:0 10px; position:relative; text-decoration:none; color:#393939}
+nav ul li.nav-active {position:absolute; z-index:1; left:0; top:0; width:0; height:26px; background:#f6f7f9; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
+
+.submenu {background:#f6f7f9; font:12px/26px EtelkaLightPro, sans-serif}
+.submenu ul {margin:0 auto; list-style:none; max-width:1190px; padding:12px 30px 12px 20px; position:relative}
+.submenu ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.submenu ul li {float:left; margin:0 0 0 10px; padding:0; position:relative; z-index:2}
+.submenu ul li a {float:left; position:relative; color:#393939; text-decoration:none; padding:0 10px}
+.submenu ul li.submenu-active {position:absolute; z-index:1; left:0; top:12px; width:0; height:26px; background:#fff844; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
+
+.content {max-width:980px; margin:0 auto; padding:0 20px}
+.content h1 {font:40px/40px EtelkaLightPro, sans-serif; color:#7db530; margin:51px 0 36px 0; padding:0; text-transform:uppercase}
+.content h2 {font:30px/30px EtelkaLightPro, sans-serif; color:#7db530; margin:44px 0 20px 0; padding:0}
+.content h3 {font:22px/20px EtelkaLightPro, sans-serif; color:#000; margin:42px 0 20px 0; padding:0; text-transform:uppercase}
+.content h2+h3 {margin-top:-5px}
+.content p {margin:20px 0; padding:0}
+.content blockquote {background:#f9fafb; margin:30px 0; padding:20px 30px; font-size:16px}
+.content-img-title {font:22px/20px EtelkaLightPro, sans-serif; color:#000; margin:0 0 20px 0; text-transform:uppercase}
+.content hr {display:block; width:100%; height:1px; border:none; background:#d5dce3; margin:28px 0; padding:0}
+.content hr+h2 {margin-top:39px}
+.content ul {margin:20px 0 40px 0; padding:0; list-style:none}
+.content ul li {margin:10px 0; padding:0 0 0 15px; position:relative}
+.content ul li:before {content:""; display:block; width:8px; height:8px; background:#8dc63f; position:absolute; left:0; top:7px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px}
+.content ul li ul {margin:0}
+.content ul li ul li {padding:0 0 0 19px}
+.content ul li ul li:before {width:14px; height:1px; background:#99d241; left:-4px; top:11px; -moz-border-radius:0; -webkit-border-radius:0; border-radius:0}
+.content ol {margin:20px 0 20px 18px; padding:0; list-style:none; counter-reset:point}
+.content ol li {margin:10px 0; padding:0}
+.content ol li:before {content:counter(point)". "; counter-increment:point 1}
+.content table {width:100%; margin:30px 0; border-collapse:collapse; font-size:13px}
+.content th {padding:19px 20px 21px 20px; vertical-align:middle; text-align:center; text-transform:uppercase; font-weight:normal; color:#fff; background:#8dc63f}
+.content td {padding:10px 20px 21px 20px; vertical-align:middle; text-align:center}
+.content td.table-row-title {text-align:left}
+.content tr.odd td {background:#f3f9eb}
+
+.text-old {color:#898989; text-decoration:line-through}
+
+.press {width:100%}
+.press:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.press-icon {float:left; line-height:0; width:40px}
+.press-content {margin:0 0 0 60px}
+.press-link {font:22px/20px EtelkaLightPro, sans-serif; text-transform:uppercase; padding:8px 0 0 0}
+.press-anonce {font-size:14px; padding:12px 0 0 0}
+.press-size {font-size:12px; font-style:italic; color:#8c8c8c; padding:11px 0 0 0}
+
+.btn {display:inline-block; vertical-align:top; padding:0 40px; margin:0; outline:none; overflow:visible; text-decoration:none; text-transform:uppercase; color:#000; font:12px/39px EtelkaLightPro, sans-serif; background:#fff605; position:relative; cursor:pointer; -webkit-appearance:none; -moz-box-shadow:inset 0 -3px 0 rgba(164, 158, 11, .75); -webkit-box-shadow:inset 0 -3px 0 rgba(164, 158, 11, .75); box-shadow:inset 0 -3px 0 rgba(164, 158, 11, .75)}
+.btn:hover {background:#fff958}
+.btn:active {background:#ffd305}
+
+.link-prev,
+.link-next {display:inline-block; vertical-align:top; width:54px; height:54px; background:url(../images/arrows.png)}
+.link-prev {background-position:left top}
+.link-prev:hover {background-position:left -54px}
+.link-prev:active {background-position:left -108px}
+.link-next {background-position:-54px top}
+.link-next:hover {background-position:-54px -54px}
+.link-next:active {background-position:-54px -108px}
+
+.pager {width:100%; margin:20px 0; font-size:0; line-height:0; letter-spacing:-1px}
+.pager-center {text-align:center}
+.pager a,
+.pager span {display:inline-block; vertical-align:top; margin:0 6px 0 0; font-size:14px; line-height:34px; letter-spacing:0; width:34px; height:34px; background:url(../images/pager.png); text-decoration:none; text-align:center; color:#393939}
+.pager span {background-position:left -34px}
+.pager strong {display:inline-block; vertical-align:top; width:29px; height:9px; background:url(../images/pager-sep.png); margin:13px 8px 0 2px}
+
+footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
+.wrapper-main footer {border-top:none; margin:0}
+.footer-inner {max-width:1180px; width:100%; margin:0 auto; padding:38px 30px 40px 30px}
+.footer-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.footer-logo {float:left; line-height:0; width:200px}
+
+.footer-menu {float:left; font:14px/20px EtelkaLightPro, sans-serif}
+.footer-menu > ul {margin:0; padding:0; list-style:none; text-transform:uppercase}
+.footer-menu > ul > li {float:left; margin:0 20px 0 0; padding:0}
+.footer-menu > ul > li > a {color:#393939; text-decoration:none}
+.footer-menu > ul > li > ul {margin:0; padding:0; list-style:none; text-transform:none; font-size:12px; padding:10px 0 0 0}
+.footer-menu > ul > li > ul > li {margin:0; padding:0}
+.footer-menu > ul > li > ul > li > a {color:#6e6e6e; text-decoration:none}
+.footer-menu a:hover {text-decoration:underline}
+
+.footer-contacts {float:right; text-align:right; font:13px/18px EtelkaLightPro, sans-serif; text-transform:uppercase; padding:1px 0 0 0}
+.footer-contacts a {color:#393939}
+
+.footer-social {font-size:0; line-height:0; letter-spacing:-1px; padding:9px 0 0 0}
+.footer-social a {margin:0 0 0 5px}
+
+.portfolio {font-size:0; line-height:0; letter-spacing:-1px; position:relative; text-align:center; margin:0 auto; max-width:1200px; padding:27px 20px 35px 20px}
+.portfolio a {display:inline-block; vertical-align:top; position:relative; width:220px; margin:0 10px -27px 10px; padding:30px 0 51px 0; text-decoration:none; cursor:pointer; color:#393939; background:#fff; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px}
+.portfolio a:hover {z-index:99; -moz-box-shadow:0 0 15px rgba(176, 184, 198, .7); -webkit-box-shadow:0 0 15px rgba(176, 184, 198, .7); box-shadow:0 0 15px rgba(176, 184, 198, .7)}
+.portfolio-img {position:relative; height:229px; line-height:229px}
+.portfolio-img img {vertical-align:bottom}
+.portfolio-name {position:relative; font:12px/18px EtelkaLightPro, sans-serif; letter-spacing:0; padding:0 15px}
+.portfolio-name span {font-size:14px; display:block; text-transform:uppercase}
+.portfolio-type {position:relative; padding:5px 0 0 0}
+.portfolio-type span {display:inline-block; color:#000; background:#fffa73; height:18px; font-size:10px; line-height:18px; letter-spacing:0; padding:0 10px}
+
+.slider {position:relative; background:#000; z-index:2}
+.slider-container {max-width:1180px; padding:0 30px; margin:0 auto; position:relative}
+.slider-content ul {margin:0; padding:0; list-style:none; position:relative}
+.slider-content ul li {display:none; position:relative; margin:0; padding:0; background-position:center; background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover}
+.slider-content ul li:first-child {display:block}
+.slider-inner {margin:0 auto; max-width:780px; padding:130px 0 41px 0}
+.slider-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.slider-icon {float:left; width:180px; height:180px; position:relative}
+.slider-icon:before {content:""; display:block; width:278px; height:278px; position:absolute; left:0; top:0; background:url(../images/slider-icon.png)}
+.slider-icon img {position:relative}
+.slider-text {margin-left:200px; color:#fff; position:relative}
+.slider-name {font:40px/40px EtelkaMediumPro, sans-serif; text-transform:uppercase; padding:12px 0 0 0}
+.slider-anonce {font-size:15px; line-height:20px; padding:16px 0 0 0}
+.slider-link {padding:50px 0 0 0; text-align:center}
+.slider-title {position:absolute; left:0; top:42px; width:100%; text-align:center; color:#fff; font:18px/18px EtelkaLightPro, sans-serif; text-transform:uppercase}
+.slider .link-prev,
+.slider .link-next {position:absolute; top:50%; margin-top:-27px}
+.slider .link-prev {left:13px; background-position:left -162px}
+.slider .link-prev:hover {background-position:left -54px}
+.slider .link-prev:active {background-position:left -108px}
+.slider .link-next {right:13px; background-position:-54px -162px}
+.slider .link-next:hover {background-position:-54px -54px}
+.slider .link-next:active {background-position:-54px -108px}
+
+.portfolio-title {text-align:center; font:20px/20px EtelkaMediumPro, sans-serif; text-transform:uppercase; color:#000; text-align:center; padding:51px 0 0 0; margin:0 0 -25px 0}
+.portfolio-link {text-align:center; position:relative; margin:-26px 0 41px 0}
+.portfolio-link .btn {padding:0 20px}
+
+.news {margin:0 30px; background:#f3f5f8}
+.news-container {max-width:1180px; padding:0 30px; margin:0 auto; position:relative}
+.news-title {text-align:center; font:20px/20px EtelkaMediumPro, sans-serif; text-transform:uppercase; color:#000; text-align:center; padding:49px 0 0 0}
+
+.news-list {font-size:0; line-height:0; letter-spacing:-1px; position:relative; margin:0 -10px; text-align:center}
+.news-list a {display:inline-block; vertical-align:top; cursor:pointer; margin:48px 10px 0 10px; width:280px; background:#fff; text-decoration:none; position:relative}
+.news-photo {position:relative}
+.news-name {font:13px/20px EtelkaLightPro, sans-serif; color:#393939; padding:19px 22px 0 22px; letter-spacing:0; text-align:left}
+.news-date {font:13px/20px EtelkaLightProItalic, sans-serif; color:#c5082e; padding:9px 22px 31px 22px; letter-spacing:0; text-align:left}
+.news-icon {position:absolute; left:20px; top:20px}
+.news-link {text-align:center; padding:31px 0 41px 0}
+.news-link .btn {padding:0 20px}
+
+.bitrix {margin:0 30px; background:#9b1f36 url(../images/bitrix-bg.png) no-repeat center top}
+.bitrix-content {max-width:780px; margin:0 auto; padding:64px 0 62px 0}
+.bitrix-content:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.bitrix-icon {float:right; width:113px; line-height:0}
+.bitrix-text {margin:0 180px 0 0; color:#fff; letter-spacing:-1px}
+.bitrix-title {font:40px/40px EtelkaMediumPro, sans-serif; padding:15px 0 0 0}
+.bitrix-anonce {font:18px/20px EtelkaLightPro, sans-serif; padding:10px 200px 0 0}
+.bitrix-anonce a {color:#fff}
+
+@media (max-width:1260px) {
+    .wrapper-main:before {display:none}
+    .wrapper-main:after {display:none}
+
+    .slider-container {padding:0}
+
+    .news {margin:0}
+
+    .bitrix {margin:0}
+}
