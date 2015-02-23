@@ -1,1 +1,24 @@
-.portfolio a {behavior:url(./js/PIE.htc)}
+.portfolio a,
+.work-main-img img,
+.work-prototype-slider-content,
+.work-prototype-preview ul li,
+.work-features-1-img img,
+.work-features-2-img img,
+.work-mobile-slider-img,
+.work-mobile-ctrl a,
+.work-layouts-list img,
+.recommend-menu a {behavior:url(./js/PIE.htc)}
+
+.work-header-info {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#40000000,endColorstr=#40000000); zoom:1}
+
+.work-prototype-slider-content ul li {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)}
+.work-prototype-slider-content ul li.active {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100)}
+
+.work-mobile-slider-content ul li {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=25)}
+.work-mobile-slider-content ul li.active {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100)}
+
+.form-file input {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)}
+
+.loading-bg {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=90)}
+
+.window-overlay {filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80)}
