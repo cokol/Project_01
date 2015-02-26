@@ -7,7 +7,11 @@
 .work-mobile-slider-img,
 .work-mobile-ctrl a,
 .work-layouts-list img,
-.recommend-menu a {behavior:url(./js/PIE.htc)}
+.recommend-menu a,
+.about-item-inner,
+.about-item-img img,
+.about-item-bitrix div,
+.about-years-bg {behavior:url(./js/PIE.htc)}
 
 .work-header-info {background:transparent; filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#40000000,endColorstr=#40000000); zoom:1}
 

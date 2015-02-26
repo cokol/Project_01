@@ -2,18 +2,17 @@
 @font-face {font-family:"EtelkaLightProItalic"; src:url("../fonts/etelkalightpro-italic-webfont.eot"); src:url("../fonts/etelkalightpro-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/etelkalightpro-italic-webfont.woff") format("woff"), url("../fonts/etelkalightpro-italic-webfont.ttf") format("truetype"), url("../fonts/etelkalightpro-italic-webfont.svg#etelka_light_proitalic") format("svg"); font-weight:normal; font-style:normal}
 @font-face {font-family:"EtelkaMediumPro"; src:url("../fonts/etelkamediumpro-webfont.eot"); src:url("../fonts/etelkamediumpro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/etelkamediumpro-webfont.woff") format("woff"), url("../fonts/etelkamediumpro-webfont.ttf") format("truetype"), url("../fonts/etelkamediumpro-webfont.svg#etelka_medium_proregular") format("svg"); font-weight:normal; font-style:normal}
 
-body {margin:0; padding:0; font:14px/20px arial, helvetica, sans-serif; color:#393939; background:#fff}
+html {min-width:1260px}
+body {min-width:1260px; margin:0; padding:0; font:14px/20px arial, helvetica, sans-serif; color:#393939; background:#fff url(../images/bg.png) center top}
 
 a {color:#0082c9; outline:none}
 a:hover {text-decoration:none}
 
 img {border:none}
 
-.wrapper {width:100%; position:relative; overflow:hidden}
-.wrapper-main:before {content:""; display:block; position:absolute; left:0; top:0; width:30px; height:100%; background:#8dc63f}
-.wrapper-main:after {content:""; display:block; position:absolute; right:0; top:0; width:30px; height:100%; background:#8dc63f}
+.wrapper {min-width:1260px; width:100%; position:relative; overflow:hidden}
 
-header {max-width:1180px; width:100%; margin:0 auto; position:relative; z-index:20; padding:0 30px 18px 30px}
+header {max-width:1180px; background:#fff; width:100%; margin:0 auto; position:relative; z-index:20; padding:0 30px 18px 30px}
 header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
 .logo {float:left; line-height:0; padding:19px 0 0 0}
@@ -26,7 +25,9 @@ nav ul li {float:left; margin:0 0 0 15px; padding:0; position:relative; z-index:
 nav ul li a {float:left; padding:0 10px; position:relative; text-decoration:none; color:#393939}
 nav ul li.nav-active {position:absolute; z-index:1; left:0; top:0; width:0; height:26px; background:#f6f7f9; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
 
-.submenu {background:#f6f7f9; font:12px/26px EtelkaLightPro, sans-serif; min-height:50px}
+.submenu {max-width:1380px; margin:0 auto; background:#f6f7f9; font:12px/26px EtelkaLightPro, sans-serif; min-height:1px}
+.submenu-services {min-height:50px}
+.submenu.fixed .submenu-services-inner {position:fixed; left:0; top:0; width:100%; background:#f6f7f9; z-index:30; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7)}
 .submenu ul {margin:0 auto; list-style:none; max-width:1190px; padding:12px 30px 12px 20px; position:relative}
 .submenu ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .submenu ul li {float:left; margin:0 0 0 10px; padding:0; position:relative; z-index:2}
@@ -54,9 +55,9 @@ nav ul li.nav-active {position:absolute; z-index:1; left:0; top:0; width:0; heig
 .content ol li:before {content:counter(point)". "; counter-increment:point 1}
 .content table {width:100%; margin:30px 0; border-collapse:collapse; font-size:13px}
 .content th {padding:19px 20px 21px 20px; vertical-align:middle; text-align:center; text-transform:uppercase; font-weight:normal; color:#fff; background:#8dc63f}
-.content td {padding:10px 20px 21px 20px; vertical-align:middle; text-align:center}
+.content td {padding:10px 20px; vertical-align:middle; text-align:center}
 .content td.table-row-title {text-align:left}
-.content tr.odd td {background:#f3f9eb}
+.content tr:nth-child(even) td {background:#f3f9eb}
 
 .text-old {color:#898989; text-decoration:line-through}
 
@@ -88,8 +89,8 @@ nav ul li.nav-active {position:absolute; z-index:1; left:0; top:0; width:0; heig
 .pager span {background-position:left -34px}
 .pager strong {display:inline-block; vertical-align:top; width:29px; height:9px; background:url(../images/pager-sep.png); margin:13px 8px 0 2px}
 
-footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
-.wrapper-main footer {border-top:none; margin:0}
+footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
+.bitrix+footer {border-top:none; margin:0}
 .footer-inner {max-width:1180px; width:100%; margin:0 auto; padding:38px 30px 40px 30px}
 .footer-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
@@ -118,9 +119,9 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .portfolio-name {position:relative; font:12px/18px EtelkaLightPro, sans-serif; letter-spacing:0; padding:0 15px}
 .portfolio-name span {font-size:14px; display:block; text-transform:uppercase}
 .portfolio-type {position:relative; padding:5px 0 0 0}
-.portfolio-type span {display:inline-block; color:#000; background:#fffa73; height:18px; font-size:10px; line-height:18px; letter-spacing:0; padding:0 10px}
+.portfolio-type span {display:inline-block; color:#000; background:#fffa73; font-size:10px; line-height:18px; letter-spacing:0; padding:0 10px}
 
-.slider {position:relative; background:#000; z-index:2}
+.slider {max-width:1440px; margin:0 auto; position:relative; background:#000; z-index:2}
 .slider-container {max-width:1180px; padding:0 30px; margin:0 auto; position:relative}
 .slider-content ul {margin:0; padding:0; list-style:none; position:relative}
 .slider-content ul li {display:none; position:relative; margin:0; padding:0; background-position:center; background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover}
@@ -148,7 +149,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .portfolio-link {text-align:center; position:relative; margin:-26px 0 41px 0}
 .portfolio-link .btn {padding:0 20px}
 
-.news {margin:0 30px; background:#f3f5f8}
+.news {margin:0 auto; max-width:1380px; background:#f3f5f8}
 .news-container {max-width:1180px; padding:0 30px; margin:0 auto; position:relative}
 .news-title {text-align:center; font:20px/20px EtelkaMediumPro, sans-serif; text-transform:uppercase; color:#000; text-align:center; padding:49px 0 0 0}
 
@@ -161,7 +162,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .news-link {text-align:center; padding:31px 0 41px 0}
 .news-link .btn {padding:0 20px}
 
-.bitrix {margin:0 30px; background:#9b1f36 url(../images/bitrix-bg.png) no-repeat center top}
+.bitrix {margin:0 auto; max-width:1380px; background:#9b1f36 url(../images/bitrix-bg.png) no-repeat center top}
 .bitrix-content {max-width:780px; margin:0 auto; padding:64px 0 62px 0}
 .bitrix-content:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .bitrix-icon {float:right; width:113px; line-height:0}
@@ -170,7 +171,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .bitrix-anonce {font:18px/20px EtelkaLightPro, sans-serif; padding:10px 200px 0 0}
 .bitrix-anonce a {color:#fff}
 
-.services {position:relative; margin:9px 0 -40px 0}
+.services {max-width:1380px; position:relative; margin:9px auto -40px auto}
 .service.odd {background:#f7fbf1}
 .service-content {max-width:980px; padding:0 30px; margin:0 auto}
 .service-title {padding:62px 0 0 0; text-transform:uppercase; font:40px/40px EtelkaLightPro, sans-serif; margin:0 0 -14px 0}
@@ -190,7 +191,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .service-item-text p+ul {margin-top:10px}
 .service-item-text ul li:before {content:""; display:block; width:8px; height:8px; background:#8dc63f; position:absolute; left:5px; top:7px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px}
 
-.work-header {position:relative; background-position:center; background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover}
+.work-header {max-width:1380px; margin:0 auto; position:relative; background-position:center; background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover}
 .work-header-content {max-width:1180px; padding:0 30px; margin:0 auto}
 .work-header-title {text-align:center; color:#fff; font:40px/40px EtelkaMediumPro, sans-serif; text-transform:uppercase; padding:51px 0 0 0}
 .work-header-anonce {text-align:center; color:#fff; font:20px/20px EtelkaLightPro, sans-serif; margin-top:-3px 0 0 0}
@@ -226,7 +227,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .work-main-img {max-width:780px; margin:40px auto 0 auto; padding:0 30px; line-height:0; position:relative}
 .work-main-img img {display:block; width:100%; position:relative; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7)}
 
-.work-prototype {background:#f6f7f9; padding:64px 0 0 0}
+.work-prototype {max-width:1380px; margin:0 auto; background:#f6f7f9; padding:64px 0 0 0}
 .work-prototype-wrap {max-width:980px; margin:0 auto; padding:0 30px}
 .work-prototype-slider {width:947px; height:506px; margin:43px auto 0 auto; padding:24px 0 0 0; position:relative; background:url(../images/work-prototype.png)}
 .work-prototype-slider-content {position:relative; width:722px; height:450px; margin:0 auto; background:#fff; line-height:0; border:4px solid #0f1014; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px}
@@ -234,7 +235,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .work-prototype-slider-content ul li {position:absolute; left:-9999px; top:-9999px; margin:0; padding:0; width:722px; height:450px; opacity:0; transition:opacity .5s ease}
 .work-prototype-slider-content ul li.active {left:0; top:0; opacity:1}
 .work-prototype-slider-content ul li img {display:block}
-.work-prototype-slider-img {position:relative; width:722px; height:450px; overflow:hidden}
+.work-prototype-slider-img {cursor:pointer; position:relative; width:722px; height:450px; overflow:hidden}
 .work-prototype-preview {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:20px 0 74px 0; margin:0 -10px; position:relative}
 .work-prototype-preview ul {width:100%; position:relative; margin:0; padding:0; list-style:none}
 .work-prototype-preview ul li {display:inline-block; margin:20px 10px 0 10px; padding:0; position:relative; vertical-align:top; width:78px; height:103px; border:1px solid #dee3e9; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7)}
@@ -246,7 +247,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .work-prototype-prev {left:-54px}
 .work-prototype-next {right:-54px}
 
-.work-features {background:#f7fbf1; padding:64px 0 0 0}
+.work-features {max-width:1380px; margin:0 auto; background:#f7fbf1; padding:64px 0 0 0}
 .work-features-wrap {max-width:980px; margin:0 auto; padding:0 30px}
 
 .work-features-1 {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; position:relative; margin:0 -15px; padding:1px 0 112px 0}
@@ -273,7 +274,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .work-mobile-slider-content ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .work-mobile-slider-content ul li {float:left; margin:0; padding:0; width:300px; position:relative; opacity:.25; transition:opacity .5s ease}
 .work-mobile-slider-content ul li.active {opacity:1}
-.work-mobile-slider-img {position:relative; margin:0 0 0 23px; width:254px; height:425px; overflow:hidden; border:1px solid #dce2e8; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7); transition:all .5s ease}
+.work-mobile-slider-img {cursor:pointer; position:relative; margin:0 0 0 23px; width:254px; height:425px; overflow:hidden; border:1px solid #dce2e8; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7); transition:all .5s ease}
 .work-mobile-slider-content ul li.active .work-mobile-slider-img {border-color:#b1b1b1; -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none}
 .work-mobile-slider-sep {position:absolute; left:0; top:0; width:100%; height:100%; background:url(../images/blank.gif)}
 .work-mobile-slider-content ul li.active .work-mobile-slider-sep {display:none}
@@ -307,7 +308,7 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .work-response-author-name {font:15px/20px EtelkaLightPro, sans-serif; text-transform:uppercase}
 .work-response-author-post {color:#696969}
 
-.work-line {background:#f6f7f9}
+.work-line {max-width:1380px; margin:0 auto; background:#f6f7f9}
 .work-line-content {max-width:980px; margin:0 auto; padding:20px 30px}
 .work-line-content:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .work-line-archive {float:left; font:14px/20px EtelkaLightPro, sans-serif; text-transform:uppercase; padding:21px 0 0 0}
@@ -380,21 +381,45 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .recommend-title {text-align:center; font:30px/30px EtelkaLightPro, sans-serif}
 .recommend-item .work-response-author {margin-top:50px}
 
-.about {height:660px; position:relative; min-width:1000px; width:100%; background:#f6f7f9 url(../images/about-bg.png) no-repeat center top}
+.about {max-width:1380px; margin:0 auto; height:660px; position:relative; width:100%; background:#f6f7f9 url(../images/about-bg.png) no-repeat center top; overflow:hidden}
 .about-header {position:absolute; left:0; top:62px; width:100%; text-align:center; font:30px/30px EtelkaLightPro, sans-serif}
-.about-container {position:relative; width:100%; height:444px; overflow:hidden}
-.about-list {position:relative; height:444px}
-.about-list-year {position:absolute; top:14px}
+.about-container {position:absolute; left:0; bottom:40px; width:100%; height:480px; overflow-x:auto; overflow-y:hidden}
+.about-list {position:relative; width:99999px; padding:20px 20px 0 20px; height:460px; overflow:hidden}
+.about-col {float:left; position:relative}
+.about-item {float:left; clear:left; margin:20px 0 0 0; width:319px; position:relative}
+.about-item-year+.about-item {margin-top:40px}
+.about-item+.about-item {margin-left:70px}
+.about-item+.about-item+.about-item {margin-left:140px}
+.about-item-inner {height:100px; position:relative; background:#fff; z-index:2; -moz-border-radius:50px 6px 6px 50px; -webkit-border-radius:50px 6px 6px 50px; border-radius:50px 6px 6px 50px; -moz-box-shadow:0 0 5px rgba(183, 206, 218, .75); -webkit-box-shadow:0 0 5px rgba(183, 206, 218, .75); box-shadow:0 0 5px rgba(183, 206, 218, .75)}
+.about-item-year .about-item-inner {background:none; -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none}
+.about-item-img {float:left; line-height:0; padding:10px 0 0 10px}
+.about-item-img img {position:relative; -moz-border-radius:40px; -webkit-border-radius:40px; border-radius:40px}
+.about-item-year .about-item-img img {-moz-box-shadow:0 0 5px rgba(183, 206, 218, .75); -webkit-box-shadow:0 0 5px rgba(183, 206, 218, .75); box-shadow:0 0 5px rgba(183, 206, 218, .75)}
+.about-item-text {float:left; padding:0 0 0 10px; display:table; width:209px}
+.about-item-text-inner {display:table-cell; vertical-align:middle; height:100px}
+.about-item-title {font:15px/20px EtelkaLightPro, sans-serif; text-transform:uppercase; color:#000}
+.about-item-descr {font-size:12px; line-height:15px; padding:3px 0 0 0}
+.about-item-bitrix {position:absolute; width:100%; margin-top:4px}
+.about-item-bitrix div {float:left; position:relative; background:#da1935 url(../images/about-bitrix.png); color:#fff; padding:0 8px; margin:0 0 0 -8px; font-size:12px; line-height:28px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px}
+.about-item-year-text {position:absolute; left:10px; top:-30px; width:80px; text-align:center; color:#5e6580; font:20px/20px EtelkaLightPro, sans-serif}
+.about-item-line {position:absolute; left:49px; top:0; width:1px; background:#d0d2db; height:520px}
+
 .about-years {position:absolute; left:0; bottom:0; width:100%; height:40px; background:#8dc63f; color:#fff; font:16px/40px EtelkaLightPro, sans-serif}
-.about-years-inner {max-width:1180px; padding:0 30px; margin:0 auto; display:table}
+.about-years-wrap {margin:0 30px; position:relative}
+.about-years-inner {display:table; position:relative; width:100%}
 .about-years-item {display:table-cell}
 .about-years-item div {display:table-cell; width:1000px; text-align:center}
+
+.about-years-bg {position:absolute; left:0; top:3px; width:100px; height:34px; background:#fff url(../images/about-years-bg.png) no-repeat center; -moz-border-radius:17px; -webkit-border-radius:17px; border-radius:17px}
+.about-drag {position:absolute; top:8px; left:0; width:24px; height:24px; background:url(../images/about-drag.png); cursor:pointer}
+
+.ui-draggable-handle {-ms-touch-action:none; touch-action:none}
 
 .about-title {font:30px/30px EtelkaLightPro, sans-serif; padding:63px 0 0 0}
 .about-title:after {content:""; display:block; width:94px; height:2px; background:#393939; margin:14px 0 0 0}
 .about-text {font-size:15px; padding:9px 0 40px 0}
 
-#map {width:100%; height:520px; position:relative; margin:0 0 -40px 0}
+#map {max-width:1380px; margin:0 auto -40px auto; width:100%; height:520px; position:relative}
 
 .window {position:absolute; left:0; top:0; width:100%; height:100%; z-index:99997; overflow:auto}
 .window-overlay {position:absolute; left:0; top:0; width:100%; height:100%; z-index:99998; background:#000; opacity:.8}
@@ -412,14 +437,3 @@ footer {border-top:1px solid #dfdfdf; margin:40px 0 0 0}
 .feedback-ctrl {background:#f6f7f9; position:relative; margin:34px -50px 0 -50px; padding:0 0 39px 0}
 .feedback-ctrl .form-submit {text-align:center}
 .feedback-ctrl .form-hint {float:none; margin:0; padding:0; text-align:center; font-style:normal; padding:15px 0 0 0}
-
-@media (max-width:1260px) {
-    .wrapper-main:before {display:none}
-    .wrapper-main:after {display:none}
-
-    .slider-container {padding:0}
-
-    .news {margin:0}
-
-    .bitrix {margin:0}
-}

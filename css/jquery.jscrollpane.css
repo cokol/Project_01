@@ -35,6 +35,11 @@
 	background: red;
 }
 
+.about .jspHorizontalBar {
+    height: 0;
+    background: none;
+}
+
 .jspCap
 {
 	display: none;
