@@ -3,7 +3,7 @@
 @font-face {font-family:"EtelkaMediumPro"; src:url("../fonts/etelkamediumpro-webfont.eot"); src:url("../fonts/etelkamediumpro-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/etelkamediumpro-webfont.woff") format("woff"), url("../fonts/etelkamediumpro-webfont.ttf") format("truetype"), url("../fonts/etelkamediumpro-webfont.svg#etelka_medium_proregular") format("svg"); font-weight:normal; font-style:normal}
 
 html {min-width:1260px}
-body {min-width:1260px; margin:0; padding:0; font:14px/20px arial, helvetica, sans-serif; color:#393939; background:#fff url(../images/bg.png) center top}
+body {min-width:1260px; margin:0; padding:0; font:14px/20px arial, helvetica, sans-serif; color:#393939; background:#8dc63f}
 
 a {color:#0082c9; outline:none}
 a:hover {text-decoration:none}
@@ -11,6 +11,7 @@ a:hover {text-decoration:none}
 img {border:none}
 
 .wrapper {min-width:1260px; width:100%; position:relative; overflow:hidden}
+.wrapper-inner {max-width:1380px; margin:0 auto; background:#fff}
 
 header {max-width:1180px; background:#fff; width:100%; margin:0 auto; position:relative; z-index:20; padding:0 30px 18px 30px}
 header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -90,7 +91,7 @@ nav ul li.nav-active {position:absolute; z-index:1; left:0; top:0; width:0; heig
 .pager strong {display:inline-block; vertical-align:top; width:29px; height:9px; background:url(../images/pager-sep.png); margin:13px 8px 0 2px}
 
 footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
-.bitrix+footer {border-top:none; margin:0}
+.bitrix+footer {border-top:none; margin-top:0}
 .footer-inner {max-width:1180px; width:100%; margin:0 auto; padding:38px 30px 40px 30px}
 .footer-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
@@ -121,7 +122,7 @@ footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
 .portfolio-type {position:relative; padding:5px 0 0 0}
 .portfolio-type span {display:inline-block; color:#000; background:#fffa73; font-size:10px; line-height:18px; letter-spacing:0; padding:0 10px}
 
-.slider {max-width:1440px; margin:0 auto; position:relative; background:#000; z-index:2}
+.slider {margin:0 -30px; position:relative; background:#000; z-index:2}
 .slider-container {max-width:1180px; padding:0 30px; margin:0 auto; position:relative}
 .slider-content ul {margin:0; padding:0; list-style:none; position:relative}
 .slider-content ul li {display:none; position:relative; margin:0; padding:0; background-position:center; background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover}

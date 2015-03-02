@@ -611,29 +611,63 @@
             curBlock.find('a').css({'min-height': curHeight});
         });
 
-        $('.work-prototype').each(function() {
-            var curBlock = $(this);
-            curBlock.find('.work-prototype-slider-img').jScrollPane({showArrows: true, animateScroll: true, animateDuration: 8000});
-            if (curBlock.find('.work-prototype-slider li.active .jspScrollable').length > 0) {
-                curBlock.find('.work-prototype-scrollable').show();
-            } else {
-                curBlock.find('.work-prototype-scrollable').hide();
-            }
-        });
+        if ($('.work-prototype, .work-mobile').length > 0) {
+            if (!Modernizr.touch) {
+                function nextScroll(curBlock) {
+                    if (curBlock.data('isAnimation')) {
+                        if (curBlock.parents().filter('.jspScrollable').length > 0) {
+                            curBlock.parents().filter('.jspScrollable').data('jsp').scrollByY(10);
+                            window.setTimeout(function() { nextScroll(curBlock); }, 100);
+                        }
+                    }
+                }
 
-        $('.work-mobile').each(function() {
-            var curBlock = $(this);
-            curBlock.find('.work-mobile-slider-img').jScrollPane({showArrows: true, animateScroll: true, animateDuration: 2000});
-            if (curBlock.find('.work-mobile-slider li.active .jspScrollable').length > 0) {
-                curBlock.find('.work-mobile-scrollable').show();
-            } else {
-                curBlock.find('.work-mobile-scrollable').hide();
-            }
-        });
+                $('.work-prototype-slider-img img, .work-mobile-slider-img img').each(function() {
+                    $(this).data('isAnimation', false);
+                });
 
-        $('.work-mobile-slider-img, .work-prototype-slider-img').mouseover(function() {
-            $(this).data('jsp').scrollToPercentY(100);
-        });
+                $('.work-prototype-slider-img img, .work-mobile-slider-img img').mousedown(function() {
+                    var curBlock = $(this);
+                    curBlock.data('isAnimation', false);
+                });
+
+                $('.work-prototype-slider-img img, .work-mobile-slider-img img').mousewheel(function() {
+                    var curBlock = $(this);
+                    curBlock.data('isAnimation', false);
+                });
+
+                $('.work-prototype-slider-img img, .work-mobile-slider-img img').mouseover(function() {
+                    var curBlock = $(this);
+                    curBlock.data('isAnimation', true);
+                    nextScroll(curBlock);
+                });
+
+                $('.work-prototype-slider-img img, .work-mobile-slider-img img').mouseout(function() {
+                    var curBlock = $(this);
+                    curBlock.data('isAnimation', false);
+                });
+            }
+
+            $('.work-prototype').each(function() {
+                var curBlock = $(this);
+                curBlock.find('.work-prototype-slider-img').jScrollPane({showArrows: true, animateScroll: true, animateDuration: 100});
+                if (curBlock.find('.work-prototype-slider li.active .jspScrollable').length > 0) {
+                    curBlock.find('.work-prototype-scrollable').show();
+                } else {
+                    curBlock.find('.work-prototype-scrollable').hide();
+                }
+            });
+
+            $('.work-mobile').each(function() {
+                var curBlock = $(this);
+                curBlock.find('.work-mobile-slider-img').jScrollPane({showArrows: true, animateScroll: true, animateDuration: 100});
+                if (curBlock.find('.work-mobile-slider li.active .jspScrollable').length > 0) {
+                    curBlock.find('.work-mobile-scrollable').show();
+                } else {
+                    curBlock.find('.work-mobile-scrollable').hide();
+                }
+            });
+        }
 
         $('.work-layouts-list').each(function() {
             $(this).isotope({

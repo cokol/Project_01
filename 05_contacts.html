@@ -20,169 +20,171 @@
         <script src="js/jquery.maskedinput.min.js"></script>
         <script src="js/tools.js"></script>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=1280" />
     </head>
 
     <body>
 
         <!-- wrapper -->
         <div class="wrapper">
+            <div class="wrapper-inner">
 
-            <header>
-                <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="125" height="43" /></a></div>
+                <header>
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="125" height="43" /></a></div>
 
-                <div class="header-search"><a href="#"><img src="images/header-search.png" alt="" width="13" height="13" /></a></div>
+                    <div class="header-search"><a href="#"><img src="images/header-search.png" alt="" width="13" height="13" /></a></div>
 
-                <nav>
-                    <ul>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Компетенции</a></li>
-                        <li><a href="#">Наши работы</a></li>
-                        <li><a href="#">Нас рекомендуют</a></li>
-                        <li class="active"><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-            </header>
-
-            <div class="submenu"></div>
-
-            <div class="content">
-                <div class="contacts-title">Контакты</div>
-                <div class="contacts-text">
-                    <div class="contacts-text-row">
-                        <div class="contacts-text-name">Телефон:</div>
-                        <div class="contacts-text-value">+7 (495) 543-43-70</div>
-                    </div>
-                    <div class="contacts-text-row">
-                        <div class="contacts-text-name">E-mail:</div>
-                        <div class="contacts-text-value"><a href="#">info@bilingo.ru</a></div>
-                    </div>
-                    <div class="contacts-text-row">
-                        <div class="contacts-text-name">Адрес:</div>
-                        <div class="contacts-text-value">Москва, ул. Бутырская, д. 46 <span class="contacts-map-link">(<a href="#map">посмотреть на карте</a>)</span></div>
-                    </div>
-                </div>
-                <div class="feedback-title">Обратная связь</div>
-
-                <div class="form">
-                    <form action="windows/success.html" method="post">
-                        <div class="form-row">
-                            <div class="form-field">
-                                <div class="form-label">Ваше Имя <span>*</span></div>
-                                <div class="form-input"><span>Например: Иван Васильевич</span><input type="text" name="name" value="" class="required" /></div>
-                            </div>
-                            <div class="form-field">
-                                <div class="form-label">E-mail <span>*</span></div>
-                                <div class="form-input"><span>Например: ivan@mail.ru</span><input type="text" name="email" value="" class="required email" /></div>
-                            </div>
-                            <div class="form-field">
-                                <div class="form-label">Телефон</div>
-                                <div class="form-input"><span>Например: +7 921 123-45-67</span><input type="text" name="phone" value="" /></div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-label">Текст сообщения <span>*</span></div>
-                            <div class="form-input"><span>Например: какой-то текст подсказки</span><textarea name="message" rows="5" cols="10" class="required"></textarea></div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-file">
-                                <span>Прикрепить файл</span>
-                                <input type="file" name="file" />
-                            </div>
-                            <div class="form-hint"><span>*</span> — поля, обязательные для заполнения</div>
-                        </div>
-
-                        <div class="form-result"></div>
-
-                        <div class="form-submit"><input type="submit" value="Отправить сообщение" class="btn" /></div>
-
-                        <div class="loading">
-                            <div class="loading-bg"></div>
-                            <div class="loading-text">Отправка данных</div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div id="map"></div>
-            <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-            <script type="text/javascript">
-                ymaps.ready(init);
-
-                var myMap;
-
-                function init () {
-                    myMap = new ymaps.Map('map', {
-                        center: [56.136, 40.390],
-                        zoom: 16
-                    });
-
-                    myMap.controls.add('zoomControl');
-
-                    var myGeocoder = ymaps.geocode('Москва, ул. Бутырская, д. 46');
-                    myGeocoder.then(
-                        function (res) {
-                            var coords = res.geoObjects.get(0).geometry.getCoordinates();
-                            myPlacemark = new ymaps.Placemark(coords, {}, {
-                                iconImageHref: 'images/map-icon.png',
-                                iconImageSize: [108, 91],
-                                iconImageOffset: [-35, -91]
-                            });
-                            myMap.geoObjects.add(myPlacemark);
-                            myMap.setCenter(coords);
-                        },
-                        function (err) {
-                            alert('Ошибка');
-                        }
-                    );
-
-                }
-            </script>
-
-            <footer>
-                <div class="footer-inner">
-                    <div class="footer-logo"><img src="images/footer-logo.png" alt="" width="80" height="27" /></div>
-                    <div class="footer-menu">
+                    <nav>
                         <ul>
                             <li><a href="#">О нас</a></li>
-                            <li>
-                                <a href="#">Компетенции</a>
-                                <ul>
-                                    <li><a href="#">Интернет-маркетинг</a></li>
-                                    <li><a href="#">Креатив</a></li>
-                                    <li><a href="#">Проектирование</a></li>
-                                    <li><a href="#">Поддержка</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Наши работы</a>
-                                <ul>
-                                    <li><a href="#">Сайты</a></li>
-                                    <li><a href="#">Интернет-магазины</a></li>
-                                    <li><a href="#">Геоинформационные системы</a></li>
-                                    <li><a href="#">Мотивационные порталы</a></li>
-                                    <li><a href="#">Креатив / дизайн</a></li>
-                                    <li><a href="#">Мобильные приложения</a></li>
-                                    <li><a href="#">Мультимедиа</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="#">Компетенции</a></li>
+                            <li><a href="#">Наши работы</a></li>
                             <li><a href="#">Нас рекомендуют</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li class="active"><a href="#">Контакты</a></li>
                         </ul>
-                    </div>
-                    <div class="footer-contacts">
-                        +7 (495) 543-43-70 &nbsp;/&nbsp; <a href="#">info@bilingo.ru</a>
-                        <div class="footer-social">
-                            <a href="#"><img src="images/social-tw.png" alt="" width="24" height="23" /></a>
-                            <a href="#"><img src="images/social-fb.png" alt="" width="25" height="23" /></a>
-                            <a href="#"><img src="images/social-vk.png" alt="" width="24" height="23" /></a>
+                    </nav>
+                </header>
+
+                <div class="submenu"></div>
+
+                <div class="content">
+                    <div class="contacts-title">Контакты</div>
+                    <div class="contacts-text">
+                        <div class="contacts-text-row">
+                            <div class="contacts-text-name">Телефон:</div>
+                            <div class="contacts-text-value">+7 (495) 543-43-70</div>
+                        </div>
+                        <div class="contacts-text-row">
+                            <div class="contacts-text-name">E-mail:</div>
+                            <div class="contacts-text-value"><a href="#">info@bilingo.ru</a></div>
+                        </div>
+                        <div class="contacts-text-row">
+                            <div class="contacts-text-name">Адрес:</div>
+                            <div class="contacts-text-value">Москва, ул. Бутырская, д. 46 <span class="contacts-map-link">(<a href="#map">посмотреть на карте</a>)</span></div>
                         </div>
                     </div>
-                </div>
-            </footer>
+                    <div class="feedback-title">Обратная связь</div>
 
+                    <div class="form">
+                        <form action="windows/success.html" method="post">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <div class="form-label">Ваше Имя <span>*</span></div>
+                                    <div class="form-input"><span>Например: Иван Васильевич</span><input type="text" name="name" value="" class="required" /></div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="form-label">E-mail <span>*</span></div>
+                                    <div class="form-input"><span>Например: ivan@mail.ru</span><input type="text" name="email" value="" class="required email" /></div>
+                                </div>
+                                <div class="form-field">
+                                    <div class="form-label">Телефон</div>
+                                    <div class="form-input"><span>Например: +7 921 123-45-67</span><input type="text" name="phone" value="" /></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-label">Текст сообщения <span>*</span></div>
+                                <div class="form-input"><span>Например: какой-то текст подсказки</span><textarea name="message" rows="5" cols="10" class="required"></textarea></div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-file">
+                                    <span>Прикрепить файл</span>
+                                    <input type="file" name="file" />
+                                </div>
+                                <div class="form-hint"><span>*</span> — поля, обязательные для заполнения</div>
+                            </div>
+
+                            <div class="form-result"></div>
+
+                            <div class="form-submit"><input type="submit" value="Отправить сообщение" class="btn" /></div>
+
+                            <div class="loading">
+                                <div class="loading-bg"></div>
+                                <div class="loading-text">Отправка данных</div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="map"></div>
+                <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                <script type="text/javascript">
+                    ymaps.ready(init);
+
+                    var myMap;
+
+                    function init () {
+                        myMap = new ymaps.Map('map', {
+                            center: [56.136, 40.390],
+                            zoom: 16
+                        });
+
+                        myMap.controls.add('zoomControl');
+
+                        var myGeocoder = ymaps.geocode('Москва, ул. Бутырская, д. 46');
+                        myGeocoder.then(
+                            function (res) {
+                                var coords = res.geoObjects.get(0).geometry.getCoordinates();
+                                myPlacemark = new ymaps.Placemark(coords, {}, {
+                                    iconImageHref: 'images/map-icon.png',
+                                    iconImageSize: [108, 91],
+                                    iconImageOffset: [-35, -91]
+                                });
+                                myMap.geoObjects.add(myPlacemark);
+                                myMap.setCenter(coords);
+                            },
+                            function (err) {
+                                alert('Ошибка');
+                            }
+                        );
+
+                    }
+                </script>
+
+                <footer>
+                    <div class="footer-inner">
+                        <div class="footer-logo"><img src="images/footer-logo.png" alt="" width="80" height="27" /></div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">О нас</a></li>
+                                <li>
+                                    <a href="#">Компетенции</a>
+                                    <ul>
+                                        <li><a href="#">Интернет-маркетинг</a></li>
+                                        <li><a href="#">Креатив</a></li>
+                                        <li><a href="#">Проектирование</a></li>
+                                        <li><a href="#">Поддержка</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Наши работы</a>
+                                    <ul>
+                                        <li><a href="#">Сайты</a></li>
+                                        <li><a href="#">Интернет-магазины</a></li>
+                                        <li><a href="#">Геоинформационные системы</a></li>
+                                        <li><a href="#">Мотивационные порталы</a></li>
+                                        <li><a href="#">Креатив / дизайн</a></li>
+                                        <li><a href="#">Мобильные приложения</a></li>
+                                        <li><a href="#">Мультимедиа</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Нас рекомендуют</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-contacts">
+                            +7 (495) 543-43-70 &nbsp;/&nbsp; <a href="#">info@bilingo.ru</a>
+                            <div class="footer-social">
+                                <a href="#"><img src="images/social-tw.png" alt="" width="24" height="23" /></a>
+                                <a href="#"><img src="images/social-fb.png" alt="" width="25" height="23" /></a>
+                                <a href="#"><img src="images/social-vk.png" alt="" width="24" height="23" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+
+            </div>
         </div>
         <!-- wrapper END -->
 
