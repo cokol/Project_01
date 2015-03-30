@@ -35,7 +35,7 @@ nav ul li.nav-active {position:absolute; z-index:1; left:0; top:0; width:0; heig
 .submenu ul li a {float:left; position:relative; color:#393939; text-decoration:none; padding:0 10px}
 .submenu ul li.submenu-active {position:absolute; z-index:1; left:0; top:12px; width:0; height:26px; background:#fff844; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px}
 
-.content {max-width:980px; margin:0 auto; padding:0 20px}
+.text {max-width:980px; margin:0 auto; padding:0 20px}
 .content h1 {font:40px/40px EtelkaLightPro, sans-serif; color:#7db530; margin:51px 0 36px 0; padding:0; text-transform:uppercase}
 .content h2 {font:30px/30px EtelkaLightPro, sans-serif; color:#7db530; margin:44px 0 20px 0; padding:0}
 .content h3 {font:22px/20px EtelkaLightPro, sans-serif; color:#000; margin:42px 0 20px 0; padding:0; text-transform:uppercase}
@@ -127,6 +127,7 @@ footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
 .slider-content ul {margin:0; padding:0; list-style:none; position:relative}
 .slider-content ul li {display:none; position:relative; margin:0; padding:0; background-position:center; background-repeat:no-repeat; -webkit-background-size:cover; -moz-background-size:cover; -o-background-size:cover; background-size:cover}
 .slider-content ul li:first-child {display:block}
+.slider-content ul li:before {display:none}
 .slider-inner {margin:0 auto; max-width:780px; padding:130px 0 41px 0}
 .slider-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .slider-icon {float:left; width:180px; height:180px; position:relative}
@@ -235,6 +236,7 @@ footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
 .work-prototype-slider-content ul {margin:0; padding:0; position:relative; list-style:none; width:722px; height:450px}
 .work-prototype-slider-content ul li {position:absolute; left:-9999px; top:-9999px; margin:0; padding:0; width:722px; height:450px; opacity:0; transition:opacity .5s ease}
 .work-prototype-slider-content ul li.active {left:0; top:0; opacity:1}
+.work-prototype-slider-content ul li:before {display:none}
 .work-prototype-slider-content ul li img {display:block}
 .work-prototype-slider-img {cursor:pointer; position:relative; width:722px; height:450px; overflow:hidden}
 .work-prototype-preview {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:20px 0 74px 0; margin:0 -10px; position:relative}
@@ -242,6 +244,7 @@ footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
 .work-prototype-preview ul li {display:inline-block; margin:20px 10px 0 10px; padding:0; position:relative; vertical-align:top; width:78px; height:103px; border:1px solid #dee3e9; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7)}
 .work-prototype-preview ul li span {display:none; position:absolute; left:-1px; top:-1px; width:76px; height:101px; border:2px solid #94c94c}
 .work-prototype-preview ul li.active span {display:block}
+.work-prototype-preview ul li:before {display:none}
 .work-prototype-scrollable {position:absolute; right:-63px; top:7px; width:140px; padding:0 0 53px 0; text-align:center; text-transform:uppercase; color:#b3bec7; font:12px/12px EtelkaLightPro, sans-serif; background:url(../images/work-prototype-scrollable.png) no-repeat left bottom}
 .work-prototype-prev,
 .work-prototype-next {position:absolute; top:216px}
@@ -275,6 +278,7 @@ footer {max-width:1380px; border-top:1px solid #dfdfdf; margin:40px auto 0 auto}
 .work-mobile-slider-content ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .work-mobile-slider-content ul li {float:left; margin:0; padding:0; width:300px; position:relative; opacity:.25; transition:opacity .5s ease}
 .work-mobile-slider-content ul li.active {opacity:1}
+.work-mobile-slider-content ul li:before {display:none}
 .work-mobile-slider-img {cursor:pointer; position:relative; margin:0 0 0 23px; width:254px; height:425px; overflow:hidden; border:1px solid #dce2e8; -moz-box-shadow:0 5px 7px rgba(176, 184, 198, .7); -webkit-box-shadow:0 5px 7px rgba(176, 184, 198, .7); box-shadow:0 5px 7px rgba(176, 184, 198, .7); transition:all .5s ease}
 .work-mobile-slider-content ul li.active .work-mobile-slider-img {border-color:#b1b1b1; -moz-box-shadow:none; -webkit-box-shadow:none; box-shadow:none}
 .work-mobile-slider-sep {position:absolute; left:0; top:0; width:100%; height:100%; background:url(../images/blank.gif)}

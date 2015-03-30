@@ -48,62 +48,64 @@
                 <div class="submenu"></div>
 
                 <div class="content">
-                    <div class="contacts-title">Контакты</div>
-                    <div class="contacts-text">
-                        <div class="contacts-text-row">
-                            <div class="contacts-text-name">Телефон:</div>
-                            <div class="contacts-text-value">+7 (495) 543-43-70</div>
+                    <div class="text">
+                        <div class="contacts-title">Контакты</div>
+                        <div class="contacts-text">
+                            <div class="contacts-text-row">
+                                <div class="contacts-text-name">Телефон:</div>
+                                <div class="contacts-text-value">+7 (495) 543-43-70</div>
+                            </div>
+                            <div class="contacts-text-row">
+                                <div class="contacts-text-name">E-mail:</div>
+                                <div class="contacts-text-value"><a href="#">info@bilingo.ru</a></div>
+                            </div>
+                            <div class="contacts-text-row">
+                                <div class="contacts-text-name">Адрес:</div>
+                                <div class="contacts-text-value">Москва, ул. Бутырская, д. 46 <span class="contacts-map-link">(<a href="#map">посмотреть на карте</a>)</span></div>
+                            </div>
                         </div>
-                        <div class="contacts-text-row">
-                            <div class="contacts-text-name">E-mail:</div>
-                            <div class="contacts-text-value"><a href="#">info@bilingo.ru</a></div>
+                        <div class="feedback-title">Обратная связь</div>
+
+                        <div class="form">
+                            <form action="windows/success.html" method="post">
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <div class="form-label">Ваше Имя <span>*</span></div>
+                                        <div class="form-input"><span>Например: Иван Васильевич</span><input type="text" name="name" value="" class="required" /></div>
+                                    </div>
+                                    <div class="form-field">
+                                        <div class="form-label">E-mail <span>*</span></div>
+                                        <div class="form-input"><span>Например: ivan@mail.ru</span><input type="text" name="email" value="" class="required email" /></div>
+                                    </div>
+                                    <div class="form-field">
+                                        <div class="form-label">Телефон</div>
+                                        <div class="form-input"><span>Например: +7 921 123-45-67</span><input type="text" name="phone" value="" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-label">Текст сообщения <span>*</span></div>
+                                    <div class="form-input"><span>Например: какой-то текст подсказки</span><textarea name="message" rows="5" cols="10" class="required"></textarea></div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-file">
+                                        <span>Прикрепить файл</span>
+                                        <input type="file" name="file" />
+                                    </div>
+                                    <div class="form-hint"><span>*</span> — поля, обязательные для заполнения</div>
+                                </div>
+
+                                <div class="form-result"></div>
+
+                                <div class="form-submit"><input type="submit" value="Отправить сообщение" class="btn" /></div>
+
+                                <div class="loading">
+                                    <div class="loading-bg"></div>
+                                    <div class="loading-text">Отправка данных</div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="contacts-text-row">
-                            <div class="contacts-text-name">Адрес:</div>
-                            <div class="contacts-text-value">Москва, ул. Бутырская, д. 46 <span class="contacts-map-link">(<a href="#map">посмотреть на карте</a>)</span></div>
-                        </div>
-                    </div>
-                    <div class="feedback-title">Обратная связь</div>
-
-                    <div class="form">
-                        <form action="windows/success.html" method="post">
-                            <div class="form-row">
-                                <div class="form-field">
-                                    <div class="form-label">Ваше Имя <span>*</span></div>
-                                    <div class="form-input"><span>Например: Иван Васильевич</span><input type="text" name="name" value="" class="required" /></div>
-                                </div>
-                                <div class="form-field">
-                                    <div class="form-label">E-mail <span>*</span></div>
-                                    <div class="form-input"><span>Например: ivan@mail.ru</span><input type="text" name="email" value="" class="required email" /></div>
-                                </div>
-                                <div class="form-field">
-                                    <div class="form-label">Телефон</div>
-                                    <div class="form-input"><span>Например: +7 921 123-45-67</span><input type="text" name="phone" value="" /></div>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-label">Текст сообщения <span>*</span></div>
-                                <div class="form-input"><span>Например: какой-то текст подсказки</span><textarea name="message" rows="5" cols="10" class="required"></textarea></div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-file">
-                                    <span>Прикрепить файл</span>
-                                    <input type="file" name="file" />
-                                </div>
-                                <div class="form-hint"><span>*</span> — поля, обязательные для заполнения</div>
-                            </div>
-
-                            <div class="form-result"></div>
-
-                            <div class="form-submit"><input type="submit" value="Отправить сообщение" class="btn" /></div>
-
-                            <div class="loading">
-                                <div class="loading-bg"></div>
-                                <div class="loading-text">Отправка данных</div>
-                            </div>
-                        </form>
                     </div>
                 </div>
 
